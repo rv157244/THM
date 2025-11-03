@@ -168,4 +168,4 @@ Já sabemos que o servidor inicia lendo uma flag e trasnforma ela em hexadecimal
 Podemos usa o [chefe](https://cyberchef.org) para fazer um brute force manual. (Não se acanhe).
 
 Com a ajuda de uma I.A. criei um [script](Script.py) para fazer grande parte do processo. feito isso não tem segredo. 
-# Hack the Word!!!
+# HexSilent - Hack the Word!!!
