@@ -1,3 +1,4 @@
+```py
 #Script Gerado por IA
 hex_encoded = ""  # Coloque a chave do servidor
 fake_flag = 'THM{'
@@ -9,3 +10,4 @@ recovered_key = ''.join(key_stream[:4])
 print(f"[+] XOR Encoded (hex): {hex_encoded}")
 print(f"[+] Flag falsa usada   : {fake_flag}")
 print(f"[+] Chave descoberta   : {recovered_key}")
+```
