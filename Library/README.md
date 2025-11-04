@@ -27,10 +27,15 @@ PORT   STATE SERVICE VERSION
 ```
 ### Flags:
 -T5 = velocidade
+
 -sS = sync varedura. É uma varedura leve, pois não completa o aberto de mãos de 3 vias.
+
 -sV = Pedir para trazer a versao do serviço.
+
 -p80 = Indica a porta a ser invetigada.
+
 -sC = Script Padrao do nmap. [Ver nmap](https://nmap.org/nsedoc/categories/default.html)
+
 ### ---
 Temos uma dica:
 ```robots.txt
@@ -41,8 +46,11 @@ Disallow: /
 ### Analisando
 
 Até agora lemos o blog e descobrimos que o usuario **meliodas** provavelmente e um usuario do sistema, assim comoo o root...
+
 Temos uma porta ssh...
+
 Temos uma referencia/dica no robots.txt...
+
 Não tem como ser mais obvio? BruteForce!
 
 ## Acesso Inicial
@@ -62,8 +70,11 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-11-04 17:38:
 ```
 ### Flags:
 -l = usuario
+
 -P = lista de palavras (wordlist)
+
 ssh = tipo de ataque
+
 ### ---
 Ok... now, ssh agora:
 ```BASH
