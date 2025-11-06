@@ -122,6 +122,13 @@ e8c8c******************88c617
 root@ubuntu:~# 
 ```
 Entao e isso. Removi o Script; escrevi um codigo python para o meu uso e capturei as flags;
+### Liçoes aprendidas?
+Cuidado com arquivos com permissoes fracas
 
+Um reconhecimento bem feito poupa tempo
+
+Ultilize logica ao pensar
+
+Ferramentas: Nmap & hydra.
 # Hack The Word !!!
 
