@@ -64,7 +64,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-11-04 17:38:
 [WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
 [DATA] max 16 tasks per 1 server, overall 16 tasks, 458 login tries (l:1/p:458), ~29 tries per task
 [DATA] attacking ssh://$IP:22/
-[22][ssh] host: $IP   login: meliodas   password: iloveyou1
+[22][ssh] host: $IP   login: meliodas   password: [REDACTED]
 1 of 1 target successfully completed, 1 valid password found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-11-04 17:38:16
 ```
