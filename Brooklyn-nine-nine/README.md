@@ -1,6 +1,6 @@
 # Brooklyn Nine Nine
 Existem duas maneiras principais de obter acesso root.
-## objetivo
+## Objetivos
 Conseguir Explorar a aplicação web.
 
 Conseguir Root de duas ou mais maneiras.
