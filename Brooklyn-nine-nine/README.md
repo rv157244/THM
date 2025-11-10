@@ -7,7 +7,7 @@ Conseguir Root de duas ou mais maneiras.
 
 Aprender o máximo.
 # Recon
-Recebemos o $IP. Dei uma olhada na pagina web, mas não havia nada. Fui ao codigo fonte e encontrei um Comentario HTML.
+Recebemos o $IP. Dei uma olhada na pagina web, mas não havia nada. Fui ao código fonte e encontrei um Comentario HTML.
 ```HTML
 <!-- Have you ever heard of steganography? -->
 ```
@@ -24,12 +24,12 @@ brooklyn99.jpg      100%[===================>]  68,05K   119KB/s    em 0,6s
 
 2025-11-10 18:22:04 (119 KB/s) - “brooklyn99.jpg” salvo [69685/69685]
 ```
-Bom, verifiquei com ferramentas como strings e binwalk. NADA.
+Bom, verifiquei com as ferramentas **Strings** e **Binwalk**: NADA.
 
 Então pesquisei como esconder e extrair coisas de imagens. Achei esse artigo no [Medium](https://medium.com/@ria.banerjee005/steganography-tools-techniques-bba3f95c7148). Thanks Medium!
 
 #### Steghide
-Eu nao a possuia. então tive que instalar.
+Eu não a possuia. Então tive que instalar.
 ```BASH
 sudo apt install steghide
 steghide extract -sf brooklyn99.jpg 
