@@ -21,7 +21,14 @@ Um número binário é um número expresso no sistema numérico de base 2, ou si
 Resposta:lets try some binary out!
 
 **Referências: [Wikipedia](https://en.wikipedia.org/wiki/Binary_number) - [Leia-me](https://github.com/rv157244/Assembly-Language/blob/main/foundation/binary-numbers.md) - Ferramenta usada: [bin decoder](https://www.rapidtables.com/convert/number/binary-to-ascii.html)**
-### 3 
+### 3 - Base 32
+        MJQXGZJTGIQGS4ZAON2XAZLSEBRW63LNN5XCA2LOEBBVIRRHOM======
+
+Resposta: base32 is super common in CTF's
+
+Ferramerta usada: [chef](https://cyberchef.org/)
+
+**Referencia: [wikipedia](https://en.wikipedia.org/wiki/Base32)**
 ### 4 - Base 64
 Base64 é uma codificação binária para texto que usa 64 caracteres imprimíveis para representar cada segmento de 6 bits de uma sequência de valores de byte [ 1 ] . Como todas as codificações binárias para texto, a codificação Base64 permite a transmissão de dados binários em um canal de comunicação que suporta apenas texto.
    
