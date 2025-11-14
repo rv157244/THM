@@ -22,6 +22,9 @@ Resposta:lets try some binary out!
 
 **Referências: [Wikipedia](https://en.wikipedia.org/wiki/Binary_number) - [Leia-me](https://github.com/rv157244/Assembly-Language/blob/main/foundation/binary-numbers.md) - Ferramenta usada: [bin decoder](https://www.rapidtables.com/convert/number/binary-to-ascii.html)**
 ### 3 - Base 32
+Base32 é uma codificação binária para texto baseada no sistema numérico de base 32. Utiliza um alfabeto de 32 dígitos , cada um representando uma combinação diferente de 5 bits (2⁵ ) . Como o Base32 não é amplamente adotado, a questão da notação, ou seja, quais caracteres usar para representar os 32 dígitos, não é tão definida quanto no caso de sistemas numéricos mais conhecidos (como o hexadecimal ), embora existam RFCs e padrões não oficiais e de facto. Uma maneira de representar números em Base32 de forma legível por humanos é usando os dígitos 0 a 9 seguidos pelas 22 letras maiúsculas A a V. No entanto, muitas outras variações são usadas em diferentes contextos. Historicamente, o código Baudot pode ser considerado um código Base32 modificado ( com estado ). O Base32 é frequentemente usado para representar cadeias de bytes.
+
+
         MJQXGZJTGIQGS4ZAON2XAZLSEBRW63LNN5XCA2LOEBBVIRRHOM======
 
 Resposta: base32 is super common in CTF's
@@ -38,3 +41,23 @@ Base64 é uma codificação binária para texto que usa 64 caracteres imprimíve
 Resposta:Each Base64 digit represents exactly 6 bits of data.
 
 **Referẽncia: [Wikipedia](https://en.wikipedia.org/wiki/Base64)**
+### 5 -Hexadecimal
+O sistema hexadecimal ( ou simplesmente hex ) é um sistema numérico posicional que representa um valor numérico na base 16. Na convenção mais comum, um dígito é representado por "0" a "9", como no sistema decimal , e por uma letra do alfabeto de "A" a "F" (maiúscula ou minúscula) para os dígitos com valor decimal de 10 a 15.
+       
+        68 65 78 61 64 65 63 69 6d 61 6c 20 6f 72 20 62 61 73 65 31 36 3f
+
+Resposta: hexadecimal or base16?
+
+Ferraenta: [decoder](https://cryptii.com/pipes/hex-decoder)
+
+**Referencia: [wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
+### 6 - Cezar
+ Em criptografia , a cifra de César , também conhecida como cifra de César , cifra de deslocamento , código de César ou deslocamento de César , é uma das técnicas de criptografia mais simples e amplamente conhecidas . É um tipo de cifra de substituição na qual cada letra do texto simples é substituída por uma letra que se encontra um número fixo de posições abaixo no alfabeto . Por exemplo, com um deslocamento para a esquerda de 3, D seria substituído por A , E se tornaria B e assim por diante. [ 1 ] O método recebeu o nome de Júlio César , que o utilizou em sua correspondência privada.
+
+        Ebgngr zr 13 cynprf!
+        
+Ferramenta: [decoder](https://cryptii.com/pipes/caesar-cipher)
+
+Resposta: Rotate me 13 places!
+
+Referencia: [wiki](https://en.wikipedia.org/wiki/Caesar_cipher)
