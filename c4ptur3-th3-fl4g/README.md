@@ -1,86 +1,185 @@
-# c4ptur3-th3-fl4g
-[ROOM](https://tryhackme.com/room/c4ptur3th3fl4g)
-## Intro
-Esse CTF tem o intuito de mostrar como é um CTF de verdade e as diversas tecnologias e adversidades que podem ser encontradas nesse caminho. Ele tambem, promove de maneira educativa a pequisa e a busca por informações.
-## Translation & Shifting
-Traduza, desloque e decodifique o seguinte:
 
-Todas as respostas diferenciam maiúsculas de minúsculas.
-## Cap 1
-### 1 - L33T   
-Leet (ou L33t ) é uma linguagem de programação esotérica baseada livremente em Brainfuck e cujo nome deriva da semelhança de seu código-fonte com a linguagem simbólica " L33t 5p34k ". L33t foi projetada por Stephen McGreal [ 1 ] e Alex Mole para ser o mais confusa possível. É Turing-completa e possui a possibilidade de código automodificável . Softwares escritos nessa linguagem podem estabelecer conexões de rede e, portanto, podem ser usados ​​para escrever malware. 
+# c4ptur3-th3-fl4g  
+[Room - TryHackMe](https://tryhackme.com/room/c4ptur3th3fl4g)
 
-    c4n y0u c4p7u23 7h3 f149?
+## Introdução
+Este CTF tem o objetivo de apresentar como funciona um desafio de captura de bandeira (CTF) real, explorando as diversas tecnologias e dificuldades que podem surgir nesse processo. Além disso, promove de maneira educativa a pesquisa e o aprendizado de técnicas de codificação e decodificação.
 
-Resposta: can you capture the flag?
+***
 
-**Referência: [Wikipedia](https://en.wikipedia.org/wiki/Leet_(programming_language))**
-### 2 - Binary
-Um número binário é um número expresso no sistema numérico de base 2, ou sistema numérico binário , um método de representação numérica que utiliza apenas dois símbolos para os números naturais: 0 e 1. 
+## Capítulo 1 — Translation & Shifting
+O objetivo desta fase é traduzir, deslocar e decodificar diversas mensagens, cada uma utilizando um tipo diferente de cifra ou representação.  
+**Atenção:** todas as respostas são *case sensitive*.
 
-    01101100 01100101 01110100 01110011 00100000 01110100 01110010 01111001 00100000 01110011 01101111 01101101 01100101 00100000 01100010 01101001 01101110 01100001 01110010 01111001 00100000 01101111 01110101 01110100 00100001
+***
 
-Resposta:lets try some binary out!
+### 1. Leet
+Leet (ou *L33t*) é uma linguagem simbólica originada da substituição de letras por números ou símbolos visualmente semelhantes.  
+Embora também exista uma linguagem de programação chamada *Leet*, o termo é mais usado para representar a escrita L33t 5p34k (leet speak).  
 
-**Referências: [Wikipedia](https://en.wikipedia.org/wiki/Binary_number) - [Leia-me](https://github.com/rv157244/Assembly-Language/blob/main/foundation/binary-numbers.md) - Ferramenta usada: [bin decoder](https://www.rapidtables.com/convert/number/binary-to-ascii.html)**
-### 3 - Base 32
-Base32 é uma codificação binária para texto baseada no sistema numérico de base 32. Utiliza um alfabeto de 32 dígitos , cada um representando uma combinação diferente de 5 bits (2⁵ ) . Como o Base32 não é amplamente adotado, a questão da notação, ou seja, quais caracteres usar para representar os 32 dígitos, não é tão definida quanto no caso de sistemas numéricos mais conhecidos (como o hexadecimal ), embora existam RFCs e padrões não oficiais e de facto. Uma maneira de representar números em Base32 de forma legível por humanos é usando os dígitos 0 a 9 seguidos pelas 22 letras maiúsculas A a V. No entanto, muitas outras variações são usadas em diferentes contextos. Historicamente, o código Baudot pode ser considerado um código Base32 modificado ( com estado ). O Base32 é frequentemente usado para representar cadeias de bytes.
+Exemplo de texto:
+```
+c4n y0u c4p7u23 7h3 f149?
+```
+
+Referência: [Wikipedia — Leet](https://en.wikipedia.org/wiki/Leet)
+
+***
+
+### 2. Binário
+O sistema binário representa números usando apenas dois símbolos: 0 e 1.  
+Ao converter o código a seguir para texto ASCII, obtemos a mensagem codificada.
+
+```
+01101100 01100101 01110100 01110011 00100000 01110100 01110010 01111001 00100000 01110011 01101111 01101101 01100101 00100000 01100010 01101001 01101110 01100001 01110010 01111001 00100000 01101111 01110101 01110100 00100001
+```
+
+Ferramenta: [Binary to ASCII Converter](https://www.rapidtables.com/convert/number/binary-to-ascii.html)  
+Referência: [Wikipedia — Binary number](https://en.wikipedia.org/wiki/Binary_number)
+
+***
+
+### 3. Base32
+O *Base32* é um sistema de codificação binário para texto, utilizando 32 caracteres distintos, geralmente compostos por A–Z e 2–7. É útil para representar dados binários em formato legível.
+
+```
+MJQXGZJTGIQGS4ZAON2XAZLSEBRW63LNN5XCA2LOEBBVIRRHOM======
+```
+
+Ferramenta: [CyberChef](https://cyberchef.org/)  
+Referência: [Wikipedia — Base32](https://en.wikipedia.org/wiki/Base32)
+
+***
+
+### 4. Base64
+Base64 é um sistema de codificação que transforma dados binários em texto usando um conjunto de 64 caracteres imprimíveis.  
+É amplamente utilizado para transmissão segura de informações em formato textual.
+
+```
+RWFjaCBCYXNlNjQgZGlnaXQgcmVwcmVzZW50cyBleGFjdGx5IDYgYml0cyBvZiBkYXRhLg==
+```
+
+Resolução:
+```bash
+echo "RWFjaCBCYXNlNjQgZGlnaXQgcmVwcmVzZW50cyBleGFjdGx5IDYgYml0cyBvZiBkYXRhLg==" | base64 -d
+```
+
+Saída: *Each Base64 digit represents exactly 6 bits of data.*  
+Referência: [Wikipedia — Base64](https://en.wikipedia.org/wiki/Base64)
+
+***
+
+### 5. Hexadecimal
+O sistema hexadecimal (base 16) utiliza os dígitos 0–9 e as letras A–F para representar valores numéricos de forma compacta.  
+Ao converter o código abaixo, obtemos:
+
+```
+68 65 78 61 64 65 63 69 6d 61 6c 20 6f 72 20 62 61 73 65 31 36 3f
+```
+
+Resultado: *hexadecimal or base16?*  
+Ferramenta: [Cryptii — Hex Decoder](https://cryptii.com/pipes/hex-decoder)  
+Referência: [Wikipedia — Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
+
+***
+
+### 6. Cifra de César
+A cifra de César substitui cada letra do texto por outra deslocada um número fixo de posições no alfabeto.
+
+```
+Ebgngr zr 13 cynprf!
+```
+
+Decodificado com ROT13 → *Rotate me 13 places!*  
+Ferramenta: [Cryptii — Caesar Cipher](https://cryptii.com/pipes/caesar-cipher)  
+Referência: [Wikipedia — Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+
+***
+
+### 7. ROT47
+Outra variação da substituição ROT, mas aplicada a todo o espectro ASCII imprimível.
+
+```
+*@F DA:? >6 C:89E C@F?5 323J C:89E C@F?5 Wcf E:>6DX
+```
+
+Ferramenta recomendada: [ROT47 Decoder](https://www.dcode.fr/rot-47-cipher)
+
+***
+
+### 8. Código Morse
+O Código Morse representa letras e símbolos usando pontos e traços.  
+Código:
+```
+- . .-.. . -.-. --- -- -- ..- -. .. -.-. .- - .. --- -.
+. -. -.-. --- -.. .. -. --.
+```
+
+Mensagem: *TELECOMMUNICATION ENCODING*  
+Ferramenta: [Morse Code Translator](https://morsecode.world/international/translator.html)
+
+***
+
+### 9. Decimal
+O sistema decimal (base 10) é o mais comum, utilizando os dígitos de 0 a 9.  
+Código:
+```
+85 110 112 97 99 107 32 116 104 105 115 32 66 67 68
+```
+
+Conversão: *Unpack this BCD*  
+Ferramenta: [CyberChef](https://cyberchef.org)  
+Referência: [Wikipedia — Decimal system](https://pt.wikipedia.org/wiki/Sistema_de_numera%C3%A7%C3%A3o_decimal)
+
+***
+
+### 10. Múltiplos Encodes
+O trecho abaixo foi codificado sequencialmente em múltiplos níveis (Base64, Morse, binário, ROT47 e decimal). Essa técnica é comum em CTFs para testar conhecimento de diferentes métodos de ofuscação e decodificação.
+
+```
+LS0tLS0gLi0tLS0gLi0tLS0gLS0tLS0g...
+```
+
+Abordagem usada: decodificação iterativa com [CyberChef](https://cyberchef.org).  
+
+***
+
+## Capítulo 2 — Espectrograma
+Um espectrograma é a representação visual do espectro de frequências de um sinal ao longo do tempo. Ao abrir o áudio fornecido no *Audacity* e mudar de “forma de onda” para “espectrograma”, uma mensagem oculta é revelada na imagem.
+
+**Resposta:** *Super Secret Message*  
+Referência: [Wikipedia — Spectrogram](https://en.wikipedia.org/wiki/Spectrogram)
+
+***
+
+## Capítulo 3 — Esteganografia
+A esteganografia é a técnica de esconder uma informação dentro de outra, como um texto oculto dentro de uma imagem.  
+Ferramentas utilizadas:
+- [StegCracker](https://github.com/Paradoxis/StegCracker)
+- [StegSeek](https://github.com/RickdeJager/stegseek) (versão moderna e mais rápida)
+
+Após executar o *StegCracker*, o processo gerou o arquivo `img.png.out` contendo a senha oculta.
+
+Citação do autor do StegCracker:
+> “Embora eu tenha gostado de construir esta ferramenta, ela sempre foi baseada em uma má ideia — o uso intensivo de subprocessos para realizar brute-force é extremamente ineficiente.”
+
+***
+
+## Capítulo 4 — Security Through Obscurity
+O conceito de *Security Through Obscurity* descreve a prática de confiar apenas no sigilo (e não em boas práticas de engenharia) para garantir a segurança de um sistema.
+
+Durante a análise do arquivo, o uso do site [StegOnline](https://www.georgeom.net/StegOnline/image) permitiu visualizar strings ocultas na imagem.  
+Parte das palavras estava disfarçada no terminal.
 
 
-        MJQXGZJTGIQGS4ZAON2XAZLSEBRW63LNN5XCA2LOEBBVIRRHOM======
 
-Resposta: base32 is super common in CTF's
+Referência: [Wikipedia — Security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity)
 
-Ferramerta usada: [chef](https://cyberchef.org/)
+***
 
-**Referencia: [wikipedia](https://en.wikipedia.org/wiki/Base32)**
-### 4 - Base 64
-Base64 é uma codificação binária para texto que usa 64 caracteres imprimíveis para representar cada segmento de 6 bits de uma sequência de valores de byte [ 1 ] . Como todas as codificações binárias para texto, a codificação Base64 permite a transmissão de dados binários em um canal de comunicação que suporta apenas texto.
-   
-    RWFjaCBCYXNlNjQgZGlnaXQgcmVwcmVzZW50cyBleGFjdGx5IDYgYml0cyBvZiBkYXRhLg==
-#### Resolução:
-    echo"RWFjaCBCYXNlNjQgZGlnaXQgcmVwcmVzZW50cyBleGFjdGx5IDYgYml0cyBvZiBkYXRhLg==" | base64 -d
-Resposta:Each Base64 digit represents exactly 6 bits of data.
+### Referências gerais  
+- [Wikipedia — Cryptography](https://en.wikipedia.org/wiki/Cryptography)  
+- [TryHackMe - Capture The Flag Basics](https://tryhackme.com/r/room/c4ptur3th3fl4g)  
+- [CyberChef - The Cyber Swiss Army Knife](https://gchq.github.io/CyberChef/)  
 
-**Referẽncia: [Wikipedia](https://en.wikipedia.org/wiki/Base64)**
-### 5 -Hexadecimal
-O sistema hexadecimal ( ou simplesmente hex ) é um sistema numérico posicional que representa um valor numérico na base 16. Na convenção mais comum, um dígito é representado por "0" a "9", como no sistema decimal , e por uma letra do alfabeto de "A" a "F" (maiúscula ou minúscula) para os dígitos com valor decimal de 10 a 15.
-       
-        68 65 78 61 64 65 63 69 6d 61 6c 20 6f 72 20 62 61 73 65 31 36 3f
-
-Resposta: hexadecimal or base16?
-
-Ferraenta: [decoder](https://cryptii.com/pipes/hex-decoder)
-
-**Referencia: [wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
-### 6 - Cezar
- Em criptografia , a cifra de César , também conhecida como cifra de César , cifra de deslocamento , código de César ou deslocamento de César , é uma das técnicas de criptografia mais simples e amplamente conhecidas . É um tipo de cifra de substituição na qual cada letra do texto simples é substituída por uma letra que se encontra um número fixo de posições abaixo no alfabeto . Por exemplo, com um deslocamento para a esquerda de 3, D seria substituído por A , E se tornaria B e assim por diante. [ 1 ] O método recebeu o nome de Júlio César , que o utilizou em sua correspondência privada.
-
-        Ebgngr zr 13 cynprf!
-        
-Ferramenta: [decoder](https://cryptii.com/pipes/caesar-cipher)
-
-Resposta: Rotate me 13 places!
-
-Referencia: [wiki](https://en.wikipedia.org/wiki/Caesar_cipher)
-## Cap 2 - Espectograma!
-Um espectrograma , ou sonograma, é o resultado do cálculo do espectro de frequência de um sinal analógico através da análise de janelas temporais. Ele produz um gráfico tridimensional que representa a energia do conteúdo de frequência do sinal à medida que varia ao longo do tempo. [wiki](https://es.wikipedia.org/wiki/Espectrograma)
-
-Abrindo o audio que nos foi fornecido pela plataforma no software audacity, mudamos a vizualização de onda sonora para espctograma
-
-Resposta: Super Secret Message
-## Cap 3 - Steganography
-Esteganografia é a prática de representar informações dentro de outra mensagem. [wiki](https://pt.wikipedia.org/wiki/Esteganografia)
-
-A ferramenta que usei e o stegcracker. Ela está ultrapassada e a sua sucessora e o Stegseek. O Stegseek e muito mais rapido, mas eu ainda escolhi usar o antigo por se tratar de um ctf silmples.
-
-    Embora eu tenha gostado de construir esta ferramenta, ela foi e sempre será construída sobre bases ruins. O StegCracker começou como uma gambiarra para um problema que não tinha soluções boas ou fáceis de usar; seu maior fator limitante, no entanto, é que ele depende de simplesmente enviar milhares de chamadas de subprocessos por segundo, o que (apesar de ser ligeiramente otimizado com múltiplas threads) é péssimo para o desempenho. Notas do autor...
- 
-No fim ele gera um arquivo img.png.out que contem a senha. 
-
-### usem o stegseek
-## Cap 4 -  Security through obscurity
-Segurança por obscuridade é a dependência, na  engenharia de segurança  , do sigilo do projeto ou da implementação como principal método para garantir  a segurança. 
-
-Pesquisando no google, encontrei o site [stegOnline](https://www.georgeom.net/StegOnline/image) quando pedir as strings ele me mostrou. No terminal certas palvras ficaram ocultas.
 # Hack The World!
