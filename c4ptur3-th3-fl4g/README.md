@@ -1,10 +1,12 @@
 # c4ptur3-th3-fl4g
+[ROOM](https://tryhackme.com/room/c4ptur3th3fl4g)
 ## Intro
 Esse CTF tem o intuito de mostrar como é um CTF de verdade e as diversas tecnologias e adversidades que podem ser encontradas nesse caminho. Ele tambem, promove de maneira educativa a pequisa e a busca por informações.
 ## Translation & Shifting
 Traduza, desloque e decodifique o seguinte:
 
 Todas as respostas diferenciam maiúsculas de minúsculas.
+## Cap 1
 ### 1 - L33T   
 Leet (ou L33t ) é uma linguagem de programação esotérica baseada livremente em Brainfuck e cujo nome deriva da semelhança de seu código-fonte com a linguagem simbólica " L33t 5p34k ". L33t foi projetada por Stephen McGreal [ 1 ] e Alex Mole para ser o mais confusa possível. É Turing-completa e possui a possibilidade de código automodificável . Softwares escritos nessa linguagem podem estabelecer conexões de rede e, portanto, podem ser usados ​​para escrever malware. 
 
@@ -61,3 +63,24 @@ Ferramenta: [decoder](https://cryptii.com/pipes/caesar-cipher)
 Resposta: Rotate me 13 places!
 
 Referencia: [wiki](https://en.wikipedia.org/wiki/Caesar_cipher)
+## Cap 2 - Espectograma!
+Um espectrograma , ou sonograma, é o resultado do cálculo do espectro de frequência de um sinal analógico através da análise de janelas temporais. Ele produz um gráfico tridimensional que representa a energia do conteúdo de frequência do sinal à medida que varia ao longo do tempo. [wiki](https://es.wikipedia.org/wiki/Espectrograma)
+
+Abrindo o audio que nos foi fornecido pela plataforma no software audacity, mudamos a vizualização de onda sonora para espctograma
+
+Resposta: Super Secret Message
+## Cap 3 - Steganography
+Esteganografia é a prática de representar informações dentro de outra mensagem. [wiki](https://pt.wikipedia.org/wiki/Esteganografia)
+
+A ferramenta que usei e o stegcracker. Ela está ultrapassada e a sua sucessora e o Stegseek. O Stegseek e muito mais rapido, mas eu ainda escolhi usar o antigo por se tratar de um ctf silmples.
+
+    Embora eu tenha gostado de construir esta ferramenta, ela foi e sempre será construída sobre bases ruins. O StegCracker começou como uma gambiarra para um problema que não tinha soluções boas ou fáceis de usar; seu maior fator limitante, no entanto, é que ele depende de simplesmente enviar milhares de chamadas de subprocessos por segundo, o que (apesar de ser ligeiramente otimizado com múltiplas threads) é péssimo para o desempenho. Notas do autor...
+ 
+No fim ele gera um arquivo img.png.out que contem a senha. 
+
+### usem o stegseek
+## Cap 4 -  Security through obscurity
+Segurança por obscuridade é a dependência, na  engenharia de segurança  , do sigilo do projeto ou da implementação como principal método para garantir  a segurança. 
+
+Pesquisando no google, encontrei o site [stegOnline](https://www.georgeom.net/StegOnline/image) quando pedir as strings ele me mostrou. No terminal certas palvras ficaram ocultas.
+# Hack The World!
